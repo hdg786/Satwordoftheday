@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Doshani Hashim Family SAT Word of the Day</title>
+<meta name="theme-color" content="#fffff8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151515" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SAT Word">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="icon-192.png">
+<style>
+@font-face{font-family:"et-book";font-style:normal;font-weight:400;font-display:swap;
+  src:url("https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff")}
+@font-face{font-family:"et-book";font-style:italic;font-weight:400;font-display:swap;
+  src:url("https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff")}
+@font-face{font-family:"et-book";font-style:normal;font-weight:700;font-display:swap;
+  src:url("https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff")}
+
+:root{--bg:#fffff8;--ink:#111;--soft:#6b6b63;--rule:#d9d9cf;--accent:#a00000;--good:#2a6b3a;color-scheme:light}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#151515;--ink:#ddd;--soft:#8f8f88;--rule:#333;--accent:#e57373;--good:#7cc08a;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;font-size:17px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:et-book,Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;line-height:1.5;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.page{max-width:56rem;margin:0 auto;padding:2.5rem 1.25rem 5rem}
+.col{max-width:34rem}
+
+/* Masthead: title only, no rules or boxes */
+.mast{margin-bottom:.25rem}
+.mast h1{font-weight:400;font-size:2.1rem;line-height:1.1;margin:0}
+.mast p{margin:.2rem 0 0;font-style:italic;color:var(--soft)}
+nav.tabs{margin:1.25rem 0 2.25rem;display:flex;gap:1.5rem}
+nav.tabs button{font:inherit;font-variant:small-caps;letter-spacing:.06em;font-size:1.05rem;
+  background:none;border:0;padding:0;color:var(--soft);cursor:pointer}
+nav.tabs button[aria-selected=true]{color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* Body text with margin notes (Tufte sidenotes) */
+.row{display:grid;grid-template-columns:minmax(0,34rem) 14rem;column-gap:2.5rem}
+.note{font-size:.82rem;line-height:1.35;color:var(--soft)}
+@media (max-width:52rem){.row{grid-template-columns:1fr}.note{margin:.15rem 0 .9rem}}
+
+.sc{font-variant:small-caps;letter-spacing:.05em}
+.date{color:var(--soft);margin:0 0 .4rem}
+.dnav{display:flex;align-items:center;justify-content:space-between;margin:2rem -.6rem 0;max-width:35.2rem;border-top:1px solid var(--rule);padding-top:.4rem}
+.dnav .link{font-size:.95rem}
+.dnav button:not(.link){font:inherit;font-size:2.2rem;line-height:1;width:2.8rem;height:2.8rem;background:none;border:0;color:var(--ink);cursor:pointer;padding:0 0 .25rem}
+.dnav button:disabled{opacity:.2;cursor:default}
+.word{font-size:3.2rem;line-height:1.05;font-weight:400;margin:0;letter-spacing:.01em;overflow-wrap:anywhere}
+.def{font-size:1.35rem;line-height:1.4;margin:.9rem 0 .8rem}
+.sent{font-style:italic;margin:0}
+.sent b{font-style:normal;font-weight:400}
+
+.daynav{margin-top:1.5rem;display:flex;gap:.5rem 2rem;font-size:1rem}
+.daynav button{padding:.6rem 0}
+#card{transition:opacity .18s ease,transform .18s ease;touch-action:pan-y}
+#card.out-l{opacity:0;transform:translateX(-24px)}
+#card.out-r{opacity:0;transform:translateX(24px)}
+@media (prefers-reduced-motion:reduce){#card{transition:none}}
+button.link{font:inherit;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;
+  text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px}
+button.link:disabled{color:var(--soft);text-decoration:none;cursor:default;opacity:.5}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+h2{font-weight:400;font-style:italic;font-size:1.5rem;margin:2.75rem 0 .5rem}
+h3{font-weight:400;font-size:1.15rem;margin:2rem 0 .25rem}
+
+/* Tables: booktabs style, horizontal rules only where they carry structure */
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th{font-weight:400;font-variant:small-caps;letter-spacing:.05em;color:var(--soft);text-align:left;
+  padding:.2rem .5rem .3rem 0;border-bottom:1px solid var(--ink)}
+td{padding:.28rem .5rem .28rem 0;vertical-align:baseline}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr.wk td{padding-top:.75rem}
+tbody tr:last-child td{border-bottom:1px solid var(--ink)}
+.archive a{color:inherit;text-decoration:none}
+.archive a:hover{text-decoration:underline}
+.archive tr.cur td{color:var(--accent)}
+.archive .def-s{color:var(--soft)}
+.archive td:first-child{white-space:nowrap;width:4.2rem}
+@media (max-width:34rem){.rate{display:none}}
+
+/* Quiz */
+.q-meta{display:flex;justify-content:space-between;color:var(--soft);font-size:.9rem;margin-bottom:.4rem}
+.tally{letter-spacing:.2em;font-family:system-ui,sans-serif;font-size:.7rem}
+.tally .r{color:var(--good)} .tally .w{color:var(--accent)}
+.opts{list-style:none;padding:0;margin:1rem 0 0}
+.opts button{display:grid;grid-template-columns:1.6rem 1fr;width:100%;text-align:left;font:inherit;font-size:1.08rem;
+  color:var(--ink);background:none;border:0;border-top:1px solid var(--rule);padding:.65rem 0;cursor:pointer}
+.opts li:last-child button{border-bottom:1px solid var(--rule)}
+.opts .k{font-variant:small-caps;color:var(--soft)}
+.opts button:disabled{cursor:default}
+.opts .right{color:var(--good)} .opts .right .k::after{content:" ✓"}
+.opts .wrong{color:var(--accent);text-decoration:line-through}
+.feedback{margin:1rem 0 0;font-style:italic;min-height:1.5em}
+.primary{font:inherit;font-size:1.05rem;color:var(--bg);background:var(--ink);border:0;border-radius:2px;
+  padding:.5rem 1.1rem;margin-top:1.1rem;cursor:pointer}
+input[type=text]{font:inherit;font-size:1.05rem;color:var(--ink);background:none;border:0;
+  border-bottom:1px solid var(--ink);padding:.3rem 0;width:12rem}
+.names{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;margin:.6rem 0 1rem}
+.muted{color:var(--soft)}
+svg.spark{display:block}
+.spark .bar{fill:var(--ink)} .spark .miss{fill:var(--rule)} .spark .today{fill:var(--accent)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <h1>SAT Word of the Day</h1>
+    <p id="famLine">The Doshani Hashim family</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-v="word" aria-selected="true">word</button>
+    <button role="tab" data-v="play" aria-selected="false">play</button>
+    <button role="tab" data-v="scores" aria-selected="false">scores</button>
+    <button role="tab" data-v="archive" aria-selected="false">archive</button>
+  </nav>
+
+  <!-- WORD -->
+  <section id="v-word" aria-live="polite">
+    <div id="card">
+    <p class="date sc" id="date"></p>
+    <div class="row">
+      <h2 class="word" id="word" style="margin:0;font-style:normal"></h2>
+      <p class="note" id="wnote"></p>
+    </div>
+    <div class="row">
+      <div>
+        <p class="def" id="def"></p>
+        <p class="sent" id="sent"></p>
+      </div>
+      <p class="note" id="snote"></p>
+    </div>
+    </div>
+    <div class="dnav">
+      <button id="prev" aria-label="Previous word">‹</button>
+      <button class="link" id="todayBtn">back to today</button>
+      <button id="next" aria-label="Next word">›</button>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section id="v-play" hidden>
+    <div class="col" id="game"></div>
+    <h2 class="boardH">This month</h2>
+    <div class="row"><div class="board"></div><p class="note boardNote"></p></div>
+  </section>
+
+  <!-- SCORES -->
+  <section id="v-scores" hidden>
+    <h2 class="boardH" style="margin-top:0">This month</h2>
+    <div class="row"><div class="board"></div><p class="note boardNote"></p></div>
+    <h2>Family name</h2>
+    <div class="row"><div id="family"></div>
+      <p class="note">Shown at the top of the app for everyone. Type just the name; "The … family" is added for you.</p></div>
+    <h2>Players</h2>
+    <div class="row"><div id="players"></div>
+      <p class="note">Changes here apply to everyone's app. Removing someone takes them off the board; their past scores stay in the history.</p></div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section id="v-archive" class="archive" hidden>
+    <p class="muted" id="count" style="margin-top:0"></p>
+    <div id="arch"></div>
+  </section>
+</div>
+
+<script>
+/* ---------- Settings ---------- */
+const START = Date.UTC(2026, 9, 15);   // first word day: Oct 15, 2026. Month is 0-based: 9 = October
+const SCORES_URL = "https://script.google.com/macros/s/AKfycbwgctJcPYeN7k_lukb23Z-rV-MRA6VdgUG7uwFToPZansuKZhHiuAqHLVfYIGELpmsvsg/exec";                 // paste your Google Apps Script web-app URL here for a shared family board
+const ROUND = 5;                       // questions per daily round
+
+const WORDS = [
+  ["eloquent", "adjective", "fluent and persuasive in speaking or writing", "Her eloquent toast left the whole table teary."],
+  ["laconic", "adjective", "using very few words", "His laconic reply was simply “Fine.”"],
+  ["abstain", "verb", "to choose not to do or have something", "Dad abstained from dessert, then ate half of mine."],
+  ["ineffable", "adjective", "too great to be described in words", "Seeing the Grand Canyon filled her with ineffable awe."],
+  ["reticent", "adjective", "not revealing thoughts or feelings readily", "She was reticent about her plans for the surprise party."],
+  ["exonerate", "verb", "to clear someone of blame", "The video exonerated the dog; the cat knocked over the vase."],
+  ["scrutinize", "verb", "to examine closely and thoroughly", "Scrutinize every answer choice before you fill in a bubble."],
+  ["benevolent", "adjective", "kind and well-meaning", "A benevolent stranger returned the wallet with every dollar inside."],
+  ["perfunctory", "adjective", "done with minimal effort or care", "He gave the dishes a perfunctory rinse."],
+  ["paucity", "noun", "the presence of something in small amounts", "A paucity of evidence made the detective doubtful."],
+  ["vacillate", "verb", "to waver between options", "I vacillated between pancakes and waffles for ten minutes."],
+  ["dogmatic", "adjective", "insisting one's opinions are undeniably true", "He is dogmatic about the correct way to load a dishwasher."],
+  ["ubiquitous", "adjective", "found everywhere", "Coffee shops are ubiquitous in Manhattan."],
+  ["hackneyed", "adjective", "overused and unoriginal", "“It was a dark and stormy night” is a hackneyed opening."],
+  ["verbose", "adjective", "using more words than needed", "The verbose instructions could have been one sentence."],
+  ["capricious", "adjective", "changing suddenly and unpredictably", "Spring weather in New York is famously capricious."],
+  ["spurious", "adjective", "false or fake, though seeming genuine", "The ad made spurious claims about instant results."],
+  ["obsolete", "adjective", "no longer used; out of date", "Fax machines are nearly obsolete."],
+  ["futile", "adjective", "pointless; incapable of producing results", "It's futile to argue with a toddler about bedtime."],
+  ["cursory", "adjective", "hasty and not thorough", "A cursory glance at the essay missed three typos."],
+  ["banal", "adjective", "so ordinary that it is boring", "The plot was so banal that I guessed the ending in ten minutes."],
+  ["transient", "adjective", "lasting only a short time", "The transient rainbow faded before we could take a photo."],
+  ["brevity", "noun", "shortness of time or concise use of words", "The principal's speech was praised for its brevity."],
+  ["erudite", "adjective", "having or showing great knowledge", "The erudite tour guide knew the history of every brick."],
+  ["cajole", "verb", "to persuade someone through flattery or coaxing", "He cajoled his parents into a later curfew."],
+  ["bolster", "verb", "to support or strengthen", "Extra practice problems bolstered her confidence before the test."],
+  ["embellish", "verb", "to add details to a story, often untrue ones", "He embellished the fishing story until the fish was six feet long."],
+  ["malleable", "adjective", "easily shaped or influenced", "Warm clay is malleable; cold clay cracks."],
+  ["superfluous", "adjective", "unnecessary; more than enough", "Cut the superfluous words from your essay."],
+  ["adroit", "adjective", "clever or skillful, especially with hands or mind", "She was adroit at untangling knotted headphone cords."],
+  ["zealous", "adjective", "full of energetic enthusiasm", "The zealous volunteer arrived an hour early."],
+  ["enigmatic", "adjective", "mysterious and difficult to understand", "The cat gave an enigmatic stare and walked away."],
+  ["alacrity", "noun", "cheerful readiness or eagerness", "He accepted the invitation to pizza night with alacrity."],
+  ["acquiesce", "verb", "to accept something reluctantly without protest", "After a long debate, my brother acquiesced and let me pick the movie."],
+  ["ameliorate", "verb", "to make something bad better", "The new bus route ameliorated our long commute."],
+  ["paradigm", "noun", "a typical model or pattern", "Smartphones created a new paradigm for how people take photos."],
+  ["disparage", "verb", "to speak of as unimportant or inferior", "Good teammates don't disparage each other after a loss."],
+  ["mundane", "adjective", "ordinary and unexciting", "Even mundane chores go faster with good music."],
+  ["prudent", "adjective", "acting with care and thought for the future", "It's prudent to save some allowance each week."],
+  ["sagacious", "adjective", "having keen judgment; wise", "Our sagacious grandfather always knew which mango was ripe."],
+  ["pragmatic", "adjective", "dealing with things sensibly and practically", "In heavy traffic, the pragmatic choice was the subway."],
+  ["impetuous", "adjective", "acting quickly without thinking", "An impetuous purchase left her with three identical sweaters."],
+  ["pedantic", "adjective", "overly concerned with minor rules and details", "It's pedantic to correct someone's grammar in a birthday card."],
+  ["austere", "adjective", "plain and without decoration; severe", "The new library is austere: white walls, wooden tables, nothing else."],
+  ["credulous", "adjective", "too ready to believe things", "Only a credulous reader would trust that headline."],
+  ["garrulous", "adjective", "excessively talkative", "The garrulous cab driver narrated the entire ride."],
+  ["equivocal", "adjective", "ambiguous; open to more than one interpretation", "His equivocal answer didn't tell us whether he'd come."],
+  ["diatribe", "noun", "a bitter, angry verbal attack", "His review turned into a diatribe against pineapple pizza."],
+  ["tenacious", "adjective", "persistent; not giving up easily", "The tenacious squirrel finally reached the bird feeder."],
+  ["precocious", "adjective", "developed earlier than usual", "The precocious six-year-old was already reading chapter books."],
+  ["ambivalent", "adjective", "having mixed or contradictory feelings", "I'm ambivalent about winter: I love snow but hate the cold."],
+  ["copious", "adjective", "plentiful; in large amounts", "He took copious notes during the museum tour."],
+  ["dearth", "noun", "a scarcity or lack of something", "There's a dearth of parking near the stadium on game day."],
+  ["incisive", "adjective", "sharp, clear, and perceptive", "The teacher's incisive comments made my essay much stronger."],
+  ["censure", "verb", "to express strong formal disapproval", "The committee censured the senator for missing so many votes."],
+  ["affable", "adjective", "friendly and easy to talk to", "Our affable neighbor knows every dog on the block by name."],
+  ["cogent", "adjective", "clear, logical, and convincing", "She made a cogent case for adopting a dog."],
+  ["conciliatory", "adjective", "intended to make peace or win someone over", "He offered a conciliatory slice of cake after the argument."],
+  ["frugal", "adjective", "careful with money; thrifty", "Being frugal with lunch money let him buy the concert ticket."],
+  ["candor", "noun", "the quality of being open and honest", "I appreciated the coach's candor about what I needed to work on."],
+  ["lethargic", "adjective", "sluggish; lacking energy", "Everyone felt lethargic after the Thanksgiving meal."],
+  ["exemplary", "adjective", "serving as an excellent example", "Her exemplary attendance earned her a certificate."],
+  ["nefarious", "adjective", "wicked or criminal", "The cartoon villain hatched a nefarious plan to steal the moon."],
+  ["didactic", "adjective", "intended to teach, often in a preachy way", "The cartoon was so didactic that the kids stopped watching."],
+  ["belligerent", "adjective", "hostile and eager to fight", "The belligerent goose chased everyone away from the pond."],
+  ["fervent", "adjective", "having intense, passionate feeling", "She is a fervent Mets fan, even in losing seasons."],
+  ["ostentatious", "adjective", "showy; meant to impress others", "The ostentatious car had gold-plated rims."],
+  ["deleterious", "adjective", "causing harm or damage", "Too little sleep has deleterious effects on memory."],
+  ["indolent", "adjective", "lazy; avoiding effort", "The indolent cat moved only to follow the sunbeam."],
+  ["apathy", "noun", "lack of interest or concern", "The class's apathy vanished when the teacher mentioned extra credit."],
+  ["eclectic", "adjective", "drawing from a wide variety of sources", "Her playlist is eclectic: jazz, K-pop, and sea shanties."],
+  ["anachronism", "noun", "something placed in the wrong time period", "A smartphone in a movie set in 1850 is an obvious anachronism."],
+  ["venerate", "verb", "to regard with great respect", "The town venerates its founding librarian."],
+  ["empirical", "adjective", "based on observation or experiment", "The science fair requires empirical evidence, not guesses."],
+  ["elicit", "verb", "to draw out a response or reaction", "The magician's trick elicited gasps from the audience."],
+  ["efficacy", "noun", "the ability to produce the intended result", "Researchers tested the efficacy of the new study app."],
+  ["corroborate", "verb", "to confirm or support with evidence", "The security footage corroborated her story."],
+  ["ephemeral", "adjective", "lasting a very short time", "The chalk mural was ephemeral; rain washed it away by noon."],
+  ["circumspect", "adjective", "careful to consider risks before acting", "Be circumspect about what you post online."],
+  ["vindicate", "verb", "to prove someone right or justified", "The test results vindicated her hypothesis."],
+  ["querulous", "adjective", "complaining in a whiny way", "The querulous passenger grumbled about every bump."],
+  ["aberration", "noun", "a departure from what is normal or expected", "Her low quiz score was an aberration; she usually aces chemistry."],
+  ["fastidious", "adjective", "very attentive to detail and accuracy", "He is fastidious about lining up his pencils."],
+  ["arbitrary", "adjective", "based on random choice rather than reason", "The bedtime rule felt arbitrary until I saw how tired I was."],
+  ["deference", "noun", "polite respect for someone's wishes or authority", "In deference to Grandma, we put our phones away at dinner."],
+  ["assiduous", "adjective", "showing great care, attention, and persistence", "Her assiduous note-taking paid off on the final exam."],
+  ["antithesis", "noun", "the direct opposite of something", "His messy desk is the antithesis of his sister's spotless one."],
+  ["meticulous", "adjective", "showing great attention to detail", "She was meticulous about labeling every jar in the pantry."],
+  ["abate", "verb", "to become less intense or widespread", "The storm finally abated, so we walked to the bakery."],
+  ["conspicuous", "adjective", "standing out; easy to notice", "Her bright yellow raincoat was conspicuous in the crowd."],
+  ["expedite", "verb", "to make something happen faster", "Paying a little extra will expedite the shipping."],
+  ["lucid", "adjective", "clear and easy to understand", "Her lucid explanation made fractions finally click."],
+  ["gregarious", "adjective", "fond of company; sociable", "Gregarious kids often make friends on the first day of camp."],
+  ["innocuous", "adjective", "harmless; not offensive", "The innocuous-looking pepper turned out to be extremely hot."],
+  ["laud", "verb", "to praise highly", "Critics lauded the student film at the festival."],
+  ["exacerbate", "verb", "to make a problem worse", "Scratching only exacerbates a mosquito bite."],
+  ["intrepid", "adjective", "fearless and adventurous", "The intrepid explorer crossed the desert by camel."],
+  ["mitigate", "verb", "to make something less severe", "Sunscreen mitigates the risk of sunburn."],
+  ["magnanimous", "adjective", "generous and forgiving, especially toward a rival", "The magnanimous winner helped her opponent up off the court."],
+  ["complacent", "adjective", "self-satisfied and unaware of possible danger", "After three wins, the team grew complacent and lost the fourth game."],
+  ["arduous", "adjective", "requiring great effort; difficult and tiring", "The hike was arduous, but the view from the top was worth it."],
+  ["obdurate", "adjective", "stubbornly refusing to change", "The obdurate toddler refused to wear anything but his dinosaur costume."],
+  ["iconoclast", "noun", "a person who challenges traditional beliefs", "The young chef was an iconoclast who put kimchi in tacos."],
+  ["hubris", "noun", "excessive pride or self-confidence", "His hubris led him to skip studying, and he failed the quiz."],
+  ["diligent", "adjective", "hardworking and careful", "A diligent student reviews mistakes, not just right answers."],
+  ["audacious", "adjective", "bold and willing to take risks", "It was audacious to challenge the chess champion on the first day of club."],
+  ["archaic", "adjective", "very old or old-fashioned", "\"Thou\" is an archaic way of saying \"you.\""],
+  ["notorious", "adjective", "famous for something bad", "The intersection is notorious for traffic jams."],
+  ["perseverance", "noun", "persistence despite difficulty", "Learning the violin takes perseverance."],
+  ["altruistic", "adjective", "unselfishly concerned for others", "Her altruistic weekend was spent at the food bank."],
+  ["languid", "adjective", "slow and relaxed; lacking energy", "We spent a languid Sunday reading on the couch."],
+  ["animosity", "noun", "strong hostility", "There was no animosity between the rivals after the match."],
+  ["enhance", "verb", "to improve in quality or value", "A squeeze of lemon enhances the soup."],
+  ["wary", "adjective", "cautious about possible problems", "The cat was wary of the new vacuum cleaner."],
+  ["lenient", "adjective", "more merciful or tolerant than expected", "The lenient teacher allowed one late assignment."],
+  ["flamboyant", "adjective", "showy and confident", "His flamboyant costume had feathers and sequins."],
+  ["dubious", "adjective", "doubtful or suspicious", "The claim that the dog did the homework seemed dubious."],
+  ["permeate", "verb", "to spread throughout", "The smell of fresh bread permeated the house."],
+  ["rhetoric", "noun", "language designed to persuade", "The candidate's rhetoric impressed the crowd."],
+  ["quell", "verb", "to put an end to", "The teacher quelled the noise with one look."],
+  ["inhibit", "verb", "to hold back or prevent", "Fear can inhibit people from speaking up."],
+  ["haughty", "adjective", "arrogantly superior", "The haughty prince refused to speak to the servants."],
+  ["gratuitous", "adjective", "uncalled for; lacking good reason", "The movie had gratuitous explosions in every scene."],
+  ["deviate", "verb", "to depart from a usual course", "Don't deviate from the recipe on your first try."],
+  ["proficient", "adjective", "competent and skilled", "She is proficient in three languages."],
+  ["condone", "verb", "to accept or allow behavior that is wrong", "The school does not condone bullying."],
+  ["ratify", "verb", "to formally approve", "The club ratified its new rules by vote."],
+  ["plausible", "adjective", "seeming reasonable or probable", "His excuse sounded plausible at first."],
+  ["exasperate", "verb", "to irritate intensely", "The slow internet exasperated everyone."],
+  ["meager", "adjective", "lacking in quantity or quality", "The meager lunch left us hungry by noon."],
+  ["egregious", "adjective", "outstandingly bad", "Forgetting her birthday was an egregious mistake."],
+  ["juxtapose", "verb", "to place side by side for contrast", "The exhibit juxtaposed old photos with new ones."],
+  ["ebullient", "adjective", "cheerful and full of energy", "The ebullient host greeted every guest with a hug."],
+  ["repudiate", "verb", "to refuse to accept or be associated with", "The author repudiated the fake quote."],
+  ["impeccable", "adjective", "without fault", "His manners at the dinner were impeccable."],
+  ["intuitive", "adjective", "easy to understand without explanation", "The new phone is intuitive enough for Grandma."],
+  ["criterion", "noun", "a standard used to judge something", "Taste was the main criterion in the cookie contest."],
+  ["subjective", "adjective", "based on personal feelings", "Whether a movie is good is subjective."],
+  ["coalesce", "verb", "to come together to form one whole", "Scattered ideas coalesced into a strong essay."],
+  ["clandestine", "adjective", "kept secret, often for an improper purpose", "They planned a clandestine meeting to organize the surprise party."],
+  ["posterity", "noun", "all future generations", "They planted the oak tree for posterity."],
+  ["elated", "adjective", "extremely happy", "She was elated when the acceptance letter arrived."],
+  ["tangible", "adjective", "able to be touched; real", "The fundraiser had tangible results: a new playground."],
+  ["benign", "adjective", "gentle; not harmful", "The doctor said the bump was benign."],
+  ["trivial", "adjective", "of little importance", "Don't argue over trivial details."],
+  ["chronicle", "verb", "to record events in order", "Her journal chronicles every day of the trip."],
+  ["admonish", "verb", "to warn or scold firmly", "The librarian admonished us for talking during the reading."],
+  ["insipid", "adjective", "lacking flavor or interest", "The hospital soup was insipid."],
+  ["preclude", "verb", "to prevent from happening", "The rain precluded a picnic."],
+  ["epitome", "noun", "a perfect example of a quality", "The sleeping cat is the epitome of relaxation."],
+  ["fallacy", "noun", "a mistaken belief or faulty reasoning", "It's a fallacy that you need to drink only when thirsty."],
+  ["anomaly", "noun", "something that deviates from what is expected", "A snowstorm in May would be an anomaly."],
+  ["untenable", "adjective", "not able to be defended", "His position became untenable after the evidence surfaced."],
+  ["induce", "verb", "to bring about or cause", "Warm milk can induce sleep."],
+  ["resilient", "adjective", "able to recover quickly", "Kids are resilient after small setbacks."],
+  ["furtive", "adjective", "secretive, as if guilty", "He gave a furtive glance at the cookie jar."],
+  ["augment", "verb", "to make greater by adding to", "He augmented his savings with birthday money."],
+  ["endorse", "verb", "to declare public approval of", "The coach endorsed the new training plan."],
+  ["subtle", "adjective", "so delicate it is hard to notice", "There was a subtle hint of cinnamon in the cake."],
+  ["hinder", "verb", "to create difficulties that delay progress", "A sprained ankle hindered her training."],
+  ["deter", "verb", "to discourage someone from acting", "A fence deters the deer from eating the garden."],
+  ["resolute", "adjective", "determined and unwavering", "She was resolute about finishing the marathon."],
+  ["relegate", "verb", "to assign to a lower position", "The old couch was relegated to the basement."],
+  ["skeptical", "adjective", "not easily convinced", "She was skeptical of the miracle diet."],
+  ["levity", "noun", "humor during a serious moment", "A bit of levity eased the tension in the waiting room."],
+  ["conjecture", "noun", "an opinion formed without full evidence", "Who ate the pie is still a matter of conjecture."],
+  ["temperance", "noun", "moderation or self-restraint", "Temperance with sweets keeps the dentist happy."],
+  ["superficial", "adjective", "existing only on the surface", "The scratch was superficial and healed quickly."],
+  ["synthesis", "noun", "the combination of parts into a whole", "Her essay was a synthesis of three different sources."],
+  ["daunting", "adjective", "seeming difficult to deal with", "The stack of homework looked daunting."],
+  ["abstruse", "adjective", "difficult to understand", "The manual was so abstruse that we gave up and watched a video."],
+  ["compliant", "adjective", "willing to follow rules or requests", "The compliant puppy sat as soon as he was asked."],
+  ["eccentric", "adjective", "unconventional and slightly strange", "The eccentric neighbor walks his cat on a leash."],
+  ["revere", "verb", "to feel deep respect for", "Students revered the retired coach."],
+  ["aesthetic", "adjective", "concerned with beauty or appreciation of beauty", "They chose the blue tiles for purely aesthetic reasons."],
+  ["innovative", "adjective", "introducing new ideas", "The innovative app helps students plan their week."],
+  ["prolific", "adjective", "producing much", "The prolific author writes two novels a year."],
+  ["ominous", "adjective", "suggesting something bad will happen", "Ominous clouds gathered before the storm."],
+  ["vigilant", "adjective", "watchful for danger", "The lifeguard stayed vigilant all afternoon."],
+  ["dormant", "adjective", "temporarily inactive", "The volcano has been dormant for centuries."],
+  ["impartial", "adjective", "treating all sides equally", "A referee must be impartial."],
+  ["listless", "adjective", "lacking energy or enthusiasm", "The heat made everyone listless."],
+  ["credible", "adjective", "able to be believed", "The witness gave a credible account of the accident."],
+  ["hypocrisy", "noun", "claiming standards one does not follow", "It was hypocrisy to ban phones at dinner and then text."],
+  ["vex", "verb", "to annoy or frustrate", "The tangled necklace vexed her for an hour."],
+  ["collaborate", "verb", "to work jointly with others", "Two classes collaborated on the mural."],
+  ["foster", "verb", "to encourage the development of", "Reading at bedtime fosters a love of books."],
+  ["extol", "verb", "to praise enthusiastically", "He extolled the virtues of his grandmother's biryani."],
+  ["veracity", "noun", "truthfulness", "Reporters checked the veracity of the claim."],
+  ["serene", "adjective", "calm and peaceful", "The lake was serene at dawn."],
+  ["tirade", "noun", "a long, angry speech", "He launched into a tirade about the parking ticket."],
+  ["prevalent", "adjective", "widespread in a particular area", "Allergies are prevalent in spring."],
+  ["abrasive", "adjective", "harsh or rough in manner", "His abrasive tone made the meeting tense."],
+  ["concede", "verb", "to admit something is true after first denying it", "He finally conceded that she had won fairly."],
+  ["acerbic", "adjective", "sharp and biting in tone", "The critic's acerbic review stung the young chef."],
+  ["ponder", "verb", "to think about carefully", "She pondered which college to visit first."],
+  ["fluctuate", "verb", "to rise and fall irregularly", "Gas prices fluctuate from week to week."],
+  ["indispensable", "adjective", "absolutely necessary", "A good calculator is indispensable in physics class."],
+  ["gullible", "adjective", "easily fooled", "Only a gullible person would believe that email."],
+  ["convivial", "adjective", "friendly and lively", "The dinner party had a warm, convivial atmosphere."],
+  ["lucrative", "adjective", "producing a lot of profit", "Dog walking turned out to be a lucrative summer job."],
+  ["blatant", "adjective", "done openly and without shame", "Copying the answer key was a blatant act of cheating."],
+  ["tentative", "adjective", "not certain or fixed", "We made tentative plans for Saturday."],
+  ["inherent", "adjective", "existing as a natural, permanent part", "There is inherent risk in rock climbing."],
+  ["articulate", "adjective", "able to express ideas clearly", "The articulate student explained the problem to the whole class."],
+  ["ascertain", "verb", "to find out for certain", "We called ahead to ascertain whether the museum was open."],
+  ["restraint", "noun", "self-control", "He showed restraint by eating only one slice of cake."],
+  ["truculent", "adjective", "eager to argue or fight", "The truculent customer shouted at the cashier."],
+  ["engender", "verb", "to cause or give rise to", "Kindness engenders trust."],
+  ["debilitate", "verb", "to make very weak", "The flu debilitated him for a week."],
+  ["unprecedented", "adjective", "never done or known before", "The heat wave was unprecedented."],
+  ["mercurial", "adjective", "subject to sudden changes of mood", "The mercurial toddler went from giggles to tears in seconds."],
+  ["diminish", "verb", "to make or become less", "The pain diminished after an hour."],
+  ["judicious", "adjective", "having good judgment", "A judicious use of salt makes all the difference."],
+  ["buttress", "verb", "to support or strengthen", "She buttressed her argument with three solid examples."],
+  ["solemn", "adjective", "formal and serious", "The ceremony had a solemn tone."],
+  ["inevitable", "adjective", "certain to happen", "With dark clouds overhead, rain seemed inevitable."],
+  ["facetious", "adjective", "joking at an inappropriate time", "His facetious remark during the serious talk annoyed the teacher."],
+  ["compelling", "adjective", "powerfully convincing or interesting", "The documentary made a compelling case for recycling."],
+  ["impede", "verb", "to delay or block progress", "Fallen trees impeded traffic after the storm."],
+  ["dexterous", "adjective", "skillful with the hands", "The dexterous knitter finished a scarf in a day."],
+  ["orthodox", "adjective", "following accepted beliefs or practices", "Her orthodox approach to chess was easy to predict."],
+  ["remorse", "noun", "deep regret for a wrong committed", "He felt remorse for breaking his sister's model."],
+  ["insatiable", "adjective", "impossible to satisfy", "He has an insatiable appetite for mystery novels."],
+  ["inundate", "verb", "to overwhelm with things to deal with", "After the post went viral, she was inundated with messages."],
+  ["poignant", "adjective", "evoking a keen sense of sadness", "The movie's ending was poignant."],
+  ["usurp", "verb", "to take a position by force", "The younger brother tried to usurp the front seat."],
+  ["auspicious", "adjective", "showing signs of future success", "Winning the first game was an auspicious start to the season."],
+  ["demure", "adjective", "reserved, modest, and shy", "The demure kitten peeked out from behind the couch."],
+  ["optimal", "adjective", "best or most favorable", "Spring is the optimal time to plant tomatoes."],
+  ["delineate", "verb", "to describe or outline precisely", "The rules delineate exactly what is allowed."],
+  ["docile", "adjective", "ready to accept control; calm", "The docile horse let the children brush its mane."],
+  ["predecessor", "noun", "a person who held a position before", "The new principal kept many of her predecessor's traditions."],
+  ["decorum", "noun", "proper and polite behavior", "Even at a casual wedding, guests kept some decorum."],
+  ["discern", "verb", "to perceive or recognize clearly", "It was hard to discern the shape in the fog."],
+  ["extraneous", "adjective", "irrelevant or unrelated", "Remove extraneous details from your lab report."],
+  ["bombastic", "adjective", "using pompous, inflated language", "The bombastic speech used big words to say very little."],
+  ["lament", "verb", "to express grief or regret", "Fans lamented the closing of the old stadium."],
+  ["camaraderie", "noun", "trust and friendship among a group", "The long bus rides built camaraderie on the team."],
+  ["taciturn", "adjective", "saying little", "The taciturn farmer answered with a nod."],
+  ["reconcile", "verb", "to restore friendly relations", "The two friends reconciled after a week of silence."],
+  ["transparent", "adjective", "easy to see through; obvious", "His excuse was transparent."],
+  ["surreptitious", "adjective", "done secretly", "She took a surreptitious bite of the frosting."],
+  ["quintessential", "adjective", "representing the most perfect example", "Apple pie is the quintessential American dessert."],
+  ["exhaustive", "adjective", "thorough and complete", "The detective made an exhaustive search of the house."],
+  ["disparate", "adjective", "essentially different in kind", "The club brings together disparate interests, from robots to poetry."],
+  ["tedious", "adjective", "long and boring", "Sorting the socks was a tedious chore."],
+  ["amenable", "adjective", "open and responsive to suggestion", "Grandpa was amenable to trying the new restaurant."],
+  ["allude", "verb", "to suggest or call attention to indirectly", "He alluded to a surprise but wouldn't say more."],
+  ["reprehensible", "adjective", "deserving condemnation", "Cheating on the test was reprehensible."],
+  ["novice", "noun", "a beginner", "As a chess novice, he lost in six moves."],
+  ["peripheral", "adjective", "on the edge; of minor importance", "That detail is peripheral to the main argument."],
+  ["refute", "verb", "to prove wrong", "She refuted his claim with a single photo."],
+  ["aloof", "adjective", "not friendly; distant", "The new cat stayed aloof for the first week."],
+  ["catalyst", "noun", "something that causes an important change", "The broken window was the catalyst for a new safety rule."],
+  ["eradicate", "verb", "to destroy completely", "Vaccines helped eradicate smallpox."],
+  ["lavish", "adjective", "rich, elaborate, and costly", "The wedding had a lavish dessert table."],
+  ["cynical", "adjective", "believing people act only out of self-interest", "He was cynical about the company's sudden generosity."],
+  ["denounce", "verb", "to publicly declare to be wrong", "The mayor denounced the vandalism."],
+  ["divergent", "adjective", "tending to be different or move apart", "The twins have divergent tastes in music."],
+  ["whimsical", "adjective", "playfully quaint or fanciful", "The whimsical mural had dancing teapots."],
+  ["tranquil", "adjective", "free from disturbance", "The garden was tranquil in the early morning."],
+  ["heresy", "noun", "an opinion against accepted beliefs", "Saying you dislike pizza is heresy in this house."],
+  ["attenuate", "verb", "to reduce in force or effect", "Thick curtains attenuated the street noise."],
+  ["inept", "adjective", "lacking skill", "The inept magician dropped every card."],
+  ["zenith", "noun", "the highest point", "The sun reaches its zenith at noon."],
+  ["jeopardize", "verb", "to put at risk", "Skipping practice could jeopardize her spot on the team."],
+  ["duplicity", "noun", "deceitfulness", "The spy's duplicity was finally exposed."],
+  ["nonchalant", "adjective", "calm and casual", "She stayed nonchalant even after scoring the winning goal."],
+  ["quandary", "noun", "a state of uncertainty about what to do", "She was in a quandary over which club to join."],
+  ["immutable", "adjective", "unchanging over time", "The laws of physics are immutable."],
+  ["concise", "adjective", "giving much information in few words", "Write a concise summary of no more than three sentences."],
+  ["nuance", "noun", "a subtle difference in meaning or tone", "A good translator captures every nuance."],
+  ["myriad", "adjective", "countless", "The night sky held a myriad of stars."],
+  ["renounce", "verb", "to formally give up", "The prince renounced his claim to the throne."],
+  ["loquacious", "adjective", "very talkative", "The loquacious parrot repeated everything it heard."],
+  ["amicable", "adjective", "friendly and without serious disagreement", "The two clubs reached an amicable agreement about the room."],
+  ["palpable", "adjective", "so intense it can almost be felt", "The excitement before the finale was palpable."],
+  ["pensive", "adjective", "deeply thoughtful", "She stared out the window in a pensive mood."],
+  ["emulate", "verb", "to imitate in order to match or surpass", "He tries to emulate his older sister's study habits."],
+  ["disseminate", "verb", "to spread information widely", "The school disseminated the news through an email."],
+  ["caustic", "adjective", "sarcastic in a hurtful way", "His caustic comments made the group project miserable."],
+  ["hypothetical", "adjective", "based on a possible situation, not a real one", "Let's consider a hypothetical: what if school started at ten?"],
+  ["torpid", "adjective", "mentally or physically inactive", "The torpid snake barely moved in the cold."],
+  ["apprehensive", "adjective", "anxious that something bad will happen", "She was apprehensive before her first piano recital."],
+  ["inadvertent", "adjective", "not intentional", "Her inadvertent sneeze blew out the candles."],
+  ["antagonize", "verb", "to cause someone to become hostile", "Poking the sleeping dog will only antagonize him."],
+  ["squander", "verb", "to waste carelessly", "Don't squander your allowance on candy."],
+  ["perceptive", "adjective", "quick to notice and understand", "The perceptive teacher knew something was wrong."],
+  ["autonomy", "noun", "the right or ability to govern oneself", "Teenagers want more autonomy over their schedules."],
+  ["replete", "adjective", "filled or well supplied", "The kitchen was replete with holiday treats."],
+  ["precarious", "adjective", "dangerously unstable", "The stack of dishes was precarious."],
+  ["galvanize", "verb", "to shock or excite into action", "The flood galvanized the town to build a levee."],
+  ["facilitate", "verb", "to make an action easier", "A good map facilitates travel."],
+  ["contrite", "adjective", "feeling sorry for a wrong one has done", "The contrite puppy hid under the table after chewing the shoe."],
+  ["jovial", "adjective", "cheerful and friendly", "The jovial uncle told jokes all through dinner."],
+  ["wistful", "adjective", "having a feeling of longing", "He gave a wistful look at the old photos."],
+  ["placate", "verb", "to make less angry", "A treat placated the barking dog."],
+  ["ingenious", "adjective", "clever and original", "She built an ingenious bird feeder from a milk carton."],
+  ["digress", "verb", "to leave the main subject temporarily", "The teacher digressed into a story about her dog."],
+  ["stoic", "adjective", "enduring pain without complaint", "She remained stoic as the nurse gave the shot."],
+  ["anecdote", "noun", "a short, interesting story about a real event", "Dad opened his speech with a funny anecdote."],
+  ["intrinsic", "adjective", "belonging naturally; essential", "Curiosity is intrinsic to good science."],
+  ["boisterous", "adjective", "noisy, energetic, and cheerful", "The boisterous crowd cheered every basket."],
+  ["incessant", "adjective", "continuing without pause", "The incessant barking kept us awake."],
+  ["obstinate", "adjective", "stubbornly refusing to change", "The obstinate mule would not cross the bridge."],
+  ["feasible", "adjective", "possible to do easily", "Walking to school is feasible when the weather is nice."],
+  ["prodigious", "adjective", "remarkably great in size or degree", "The squirrel had a prodigious stash of acorns."],
+  ["latent", "adjective", "present but not yet visible or active", "Art class revealed his latent talent for drawing."],
+  ["hamper", "verb", "to hinder or slow down", "Heavy snow hampered the rescue effort."],
+  ["imperative", "adjective", "of vital importance", "It is imperative to wear a helmet when biking."],
+  ["culpable", "adjective", "deserving blame", "The driver who ran the red light was culpable."],
+  ["deft", "adjective", "quick and skillful", "With a deft flick, she flipped the pancake."],
+  ["implicit", "adjective", "suggested but not directly stated", "There was an implicit promise of dessert if we finished dinner."],
+  ["acrimony", "noun", "bitterness or ill feeling", "The game ended in acrimony over a disputed call."],
+  ["rudimentary", "adjective", "basic; involving only simple facts", "He has a rudimentary knowledge of Spanish."],
+  ["convoluted", "adjective", "extremely complex and hard to follow", "The movie's convoluted plot confused everyone."],
+  ["solicitous", "adjective", "showing care or concern", "The solicitous nurse checked on him every hour."],
+  ["fickle", "adjective", "changing loyalties or interests often", "Toddlers are fickle about which cup they want."],
+  ["esoteric", "adjective", "understood by only a small group", "The lecture was full of esoteric math terms."],
+  ["philanthropic", "adjective", "seeking to promote the welfare of others", "The philanthropic couple funded a new library."],
+  ["deride", "verb", "to mock or ridicule", "They derided his idea until it actually worked."],
+  ["impulsive", "adjective", "acting without forethought", "An impulsive decision left him with a pet hamster."],
+  ["kinetic", "adjective", "relating to motion", "A swinging pendulum has kinetic energy."],
+  ["integrity", "noun", "the quality of being honest and moral", "She showed integrity by returning the extra change."],
+  ["naive", "adjective", "lacking experience or judgment", "It was naive to think the cat would stay off the table."],
+  ["cacophony", "noun", "a harsh mixture of sounds", "The first band practice was a cacophony of drums and squeaks."],
+  ["infer", "verb", "to conclude from evidence", "From the muddy paws, we inferred the dog had been outside."],
+  ["alleviate", "verb", "to make suffering or a problem less severe", "A cold compress alleviated the swelling."],
+  ["prosaic", "adjective", "dull and ordinary", "He gave a prosaic description of a thrilling ride."],
+  ["chagrin", "noun", "annoyance or embarrassment at failing", "To his chagrin, the cake collapsed in front of the guests."],
+  ["virtuoso", "noun", "a person highly skilled in an art", "The young violin virtuoso amazed the audience."],
+  ["coerce", "verb", "to force someone to act by using threats", "No one should be coerced into joining a team."],
+  ["obsequious", "adjective", "too eager to please or obey", "The obsequious waiter refilled our water every minute."],
+  ["undermine", "verb", "to weaken gradually", "Constant criticism can undermine confidence."],
+  ["obscure", "adjective", "not well known; unclear", "The trivia question was about an obscure planet."],
+  ["despondent", "adjective", "in low spirits from loss of hope", "He was despondent after missing the final shot."],
+  ["rebuke", "verb", "to express sharp disapproval", "The coach rebuked the player for unsportsmanlike conduct."],
+  ["stagnant", "adjective", "not flowing or moving", "Mosquitoes breed in stagnant water."],
+  ["connoisseur", "noun", "an expert judge in matters of taste", "My uncle is a connoisseur of mangoes."],
+  ["mollify", "verb", "to calm someone's anger", "A sincere apology mollified the upset neighbor."],
+  ["conventional", "adjective", "based on what is generally done", "They skipped the conventional cake and had pie instead."],
+  ["pristine", "adjective", "in its original condition; perfectly clean", "The new sneakers were pristine until the first puddle."],
+  ["candid", "adjective", "truthful and straightforward", "She gave a candid answer about why she quit the club."],
+  ["pertinent", "adjective", "relevant to the matter at hand", "Only include pertinent facts in your report."],
+  ["aversion", "noun", "a strong dislike", "My brother has an aversion to mushrooms."],
+  ["callous", "adjective", "showing cruel disregard for others", "It was callous to laugh when he tripped."],
+  ["aggregate", "noun", "a whole formed by combining several parts", "The team's aggregate score was the highest in the league."],
+  ["vilify", "verb", "to speak about in an abusive way", "The tabloids vilified the actor."],
+  ["luminous", "adjective", "bright or shining", "The luminous moon lit up the path."],
+  ["proximity", "noun", "nearness in space or time", "The apartment's proximity to the subway was a big plus."],
+  ["enumerate", "verb", "to name one by one", "She enumerated every reason she deserved a later bedtime."],
+  ["melancholy", "noun", "a deep, lasting sadness", "Rainy Sundays fill him with melancholy."],
+  ["genial", "adjective", "friendly and cheerful", "The genial shopkeeper always offered us a sample."],
+  ["innate", "adjective", "present from birth", "She has an innate sense of rhythm."],
+  ["sporadic", "adjective", "occurring at irregular intervals", "There was sporadic rain throughout the day."],
+  ["berate", "verb", "to scold angrily", "The coach never berates players for honest mistakes."],
+  ["volatile", "adjective", "liable to change rapidly and unpredictably", "Stock prices can be volatile."],
+  ["derivative", "adjective", "copied from or imitating others", "Critics called the song derivative of older hits."],
+  ["acumen", "noun", "the ability to make good judgments quickly", "Her business acumen turned a lemonade stand into a summer job."],
+  ["urbane", "adjective", "courteous and refined", "The urbane host made every guest feel welcome."],
+  ["astute", "adjective", "clever at understanding situations", "An astute reader will spot the clue in chapter one."],
+  ["trepidation", "noun", "fear about something that may happen", "She approached the tall slide with trepidation."],
+  ["pernicious", "adjective", "harmful in a gradual or subtle way", "Gossip has a pernicious effect on friendships."],
+  ["scrupulous", "adjective", "careful to do things correctly and honestly", "The scrupulous treasurer recorded every penny."],
+  ["paradox", "noun", "a statement that seems contradictory but may be true", "It's a paradox that the more you rush, the slower you finish."],
+  ["consensus", "noun", "general agreement", "The family reached a consensus on pizza for dinner."],
+  ["irreverent", "adjective", "showing a lack of respect", "The comedian's irreverent jokes poked fun at everyone."],
+  ["morose", "adjective", "gloomy and sullen", "He was morose after his team lost the final."],
+  ["propensity", "noun", "a natural tendency", "The puppy has a propensity for chewing shoes."],
+  ["modicum", "noun", "a small amount", "Show a modicum of patience while the cake bakes."],
+  ["sycophant", "noun", "a person who flatters to gain advantage", "The king was surrounded by sycophants."],
+  ["stringent", "adjective", "strict and precise", "The lab has stringent safety rules."],
+  ["avarice", "noun", "extreme greed for wealth", "The villain's avarice was his downfall."],
+  ["contentious", "adjective", "likely to cause an argument", "The new homework policy was a contentious topic."],
+  ["profound", "adjective", "very great or deep", "The book had a profound effect on him."],
+  ["amiable", "adjective", "having a friendly, pleasant manner", "The amiable bus driver greeted every passenger."],
+  ["flagrant", "adjective", "obviously wrong or offensive", "Shoving another player was a flagrant foul."],
+  ["evanescent", "adjective", "quickly fading from sight or memory", "The evanescent smell of rain was gone by morning."],
+  ["euphemism", "noun", "a mild word used in place of a harsh one", "\"Passed away\" is a euphemism for \"died.\""],
+  ["burgeon", "verb", "to grow or expand quickly", "The town's burgeoning population needed a new school."],
+  ["viable", "adjective", "capable of working successfully", "Biking to work is a viable option in summer."],
+  ["voracious", "adjective", "wanting great quantities", "She is a voracious reader who finishes a book a day."],
+  ["negligent", "adjective", "failing to take proper care", "The negligent driver forgot to set the parking brake."],
+  ["abridge", "verb", "to shorten a text without losing its meaning", "The class read an abridged version of the novel."],
+  ["sedentary", "adjective", "involving much sitting", "A sedentary job makes evening walks important."],
+  ["sanction", "verb", "to give official permission", "The school sanctioned the new chess club."],
+  ["disdain", "noun", "the feeling that something is unworthy of respect", "The cat looked at the cheap toy with disdain."],
+  ["abhor", "verb", "to hate something intensely", "She abhors the sound of chalk squeaking on a board."],
+  ["coherent", "adjective", "logical and consistent", "After some sleep, his explanation became more coherent."],
+  ["contemplate", "verb", "to think about deeply", "She contemplated the question before answering."],
+  ["opulent", "adjective", "rich and luxurious", "The hotel lobby was opulent, with gold chandeliers."],
+  ["elusive", "adjective", "difficult to find or catch", "The elusive fox appeared only at dusk."],
+  ["irascible", "adjective", "easily angered", "The irascible cook yelled when anyone touched his knives."],
+  ["frivolous", "adjective", "not serious; silly", "She spent her bonus on something frivolous: a giant plush whale."],
+  ["succinct", "adjective", "briefly and clearly expressed", "His succinct answer fit on one line."],
+  ["pervasive", "adjective", "spreading widely throughout", "The pervasive smell of paint filled every room."],
+  ["illicit", "adjective", "forbidden by law or rules", "The illicit candy stash was found under the bed."],
+  ["partisan", "adjective", "strongly supporting one side", "The debate became too partisan to be useful."],
+  ["fortuitous", "adjective", "happening by lucky chance", "A fortuitous meeting at the park led to a lifelong friendship."],
+  ["baffle", "verb", "to totally confuse", "The riddle baffled everyone at the table."],
+  ["comprehensive", "adjective", "including nearly everything", "The study guide was comprehensive, covering every chapter."],
+  ["misnomer", "noun", "a wrongly applied name", "\"Guinea pig\" is a misnomer; it's not from Guinea and isn't a pig."],
+  ["exorbitant", "adjective", "unreasonably high, especially in price", "The stadium charges exorbitant prices for snacks."],
+  ["arbiter", "noun", "a person who settles a dispute", "Mom acted as arbiter in the fight over the last cookie."],
+  ["indifferent", "adjective", "having no particular interest", "He was indifferent to which movie we picked."],
+  ["vindictive", "adjective", "wanting revenge", "The vindictive villain held a grudge for years."],
+  ["explicit", "adjective", "stated clearly and in detail", "The instructions were explicit: no phones during the test."],
+  ["insolent", "adjective", "rude and disrespectful", "The insolent reply earned him detention."],
+  ["relentless", "adjective", "persistent and unending", "The relentless rain lasted all week."],
+  ["opaque", "adjective", "not able to be seen through; unclear", "The bathroom window has opaque glass."],
+  ["redundant", "adjective", "no longer needed; repetitive", "\"Free gift\" is redundant, since gifts are free."],
+  ["opportune", "adjective", "happening at a convenient time", "The bus arrived at an opportune moment, just as it began to rain."],
+  ["commend", "verb", "to praise formally", "The principal commended the students for their kindness."],
+  ["turbulent", "adjective", "characterized by conflict or disorder", "The plane shook through turbulent air."],
+  ["accolade", "noun", "an award or expression of praise", "The science project earned every accolade at the fair."],
+  ["provocative", "adjective", "causing a strong reaction", "The provocative question sparked a lively debate."],
+  ["indignant", "adjective", "angry at unfair treatment", "She was indignant when blamed for her brother's mess."],
+  ["unanimous", "adjective", "fully in agreement", "The vote for pizza was unanimous."],
+  ["perplex", "verb", "to confuse completely", "The last math problem perplexed the whole class."],
+  ["idiosyncrasy", "noun", "a quirk unique to a person", "One of her idiosyncrasies is eating pizza crust first."],
+  ["oblivious", "adjective", "not aware of what is happening", "He was oblivious to the surprise party being set up behind him."],
+  ["salient", "adjective", "most noticeable or important", "Summarize the salient points of the article."],
+  ["rancor", "noun", "bitter, long-lasting resentment", "They settled the argument without rancor."],
+  ["incongruous", "adjective", "out of place", "A snowman on a sunny beach would look incongruous."],
+  ["cognizant", "adjective", "aware or having knowledge of", "Be cognizant of the time limit during the test."]
+  // Add new words at the END only. Never reorder or delete, or past days will change.
+];
+
+/* ---------- Dates ---------- */
+const DAY = 864e5, $ = id => document.getElementById(id);
+const fmt = (i, o) => new Date(START + i*DAY).toLocaleDateString("en-US", {timeZone:"UTC", ...o});
+const iso = i => new Date(START + i*DAY).toISOString().slice(0,10);
+const wordFor = i => WORDS[i];
+const realTodayIdx = () => { const d = new Date(); return Math.round((Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) - START)/DAY); };
+const todayIdx = () => Math.min(realTodayIdx(), WORDS.length - 1);   // never repeats: stops at the last word on the list
+const localKey = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const todayKey = () => localKey(new Date());
+function weekStart(off = 0){ const d = new Date(); d.setHours(12,0,0,0); d.setDate(d.getDate() - d.getDay() + off*7); return d; }
+const weekKey = (off = 0) => localKey(weekStart(off));
+function monthStart(off = 0){ const d = new Date(); return new Date(d.getFullYear(), d.getMonth() + off, 1, 12); }
+const monthKey = (off = 0) => localKey(monthStart(off)).slice(0,7);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+function markWord(sent, w){
+  const stem = w.length > 4 ? w.replace(/[ey]$/, "") : w;
+  return esc(sent).replace(new RegExp("\\b(" + stem + "\\w*)", "i"), "<b>$1</b>");
+}
+
+/* ---------- Views ---------- */
+function view(v){
+  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.v === v));
+  ["word","play","scores","archive"].forEach(x => $("v-"+x).hidden = x !== v);
+  if(v === "play" || v === "scores") refresh();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => view(b.dataset.v));
+
+/* ---------- Word of the day ---------- */
+let cur = 0;
+function show(i){
+  cur = i;
+  const [w, pos, def, sent] = wordFor(i), t = todayIdx();
+  $("date").textContent = (i === t ? "today · " : "") + fmt(i, {weekday:"long", month:"long", day:"numeric", year:"numeric"}).toLowerCase();
+  $("word").textContent = w;
+  $("wnote").innerHTML = `<i>${pos}</i>`;
+  $("def").textContent = cap(def) + ".";
+  $("sent").innerHTML = markWord(sent, w);
+  $("snote").textContent = realTodayIdx() > t
+    ? `That's all ${WORDS.length} words on the list. Add more words to keep going.`
+    : `Word ${i+1} of ${t+1}. Tap ‹ below or swipe right for earlier words.`;
+  $("prev").disabled = i <= 0;
+  $("next").disabled = i >= t;
+  $("todayBtn").style.visibility = i === t ? "hidden" : "visible";
+  document.querySelectorAll(".archive tr[data-i]").forEach(r => r.classList.toggle("cur", +r.dataset.i === i));
+}
+function idxFromHash(){
+  const m = location.hash.match(/^#(\d{4})-(\d{2})-(\d{2})$/);
+  if(!m) return null;
+  const i = Math.round((Date.UTC(+m[1], m[2]-1, +m[3]) - START)/DAY);
+  return (i >= 0 && i <= todayIdx()) ? i : null;
+}
+function go(i){
+  const t = todayIdx(); if(i < 0 || i > t || i === cur) return;
+  try{ history.replaceState(null, "", i === t ? location.pathname + location.search : "#" + iso(i)); }catch{}
+  const card = $("card"), dir = i < cur ? "out-r" : "out-l";
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches){ show(i); return; }
+  card.classList.add(dir);
+  setTimeout(() => { show(i); card.classList.remove(dir); card.classList.add(dir === "out-l" ? "out-r" : "out-l");
+    requestAnimationFrame(() => requestAnimationFrame(() => card.classList.remove("out-l","out-r"))); }, 180);
+}
+let sx = 0, sy = 0;
+$("card").addEventListener("touchstart", e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive:true});
+$("card").addEventListener("touchend", e => {
+  const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+  if(Math.abs(dx) > 50 && Math.abs(dx) > 1.5*Math.abs(dy)) go(dx > 0 ? cur - 1 : cur + 1);
+}, {passive:true});
+addEventListener("keydown", e => {
+  if($("v-word").hidden || e.target.tagName === "INPUT") return;
+  if(e.key === "ArrowLeft") go(cur - 1); if(e.key === "ArrowRight") go(cur + 1);
+});
+$("prev").onclick = () => go(cur - 1);
+$("next").onclick = () => go(cur + 1);
+$("todayBtn").onclick = () => go(todayIdx());
+addEventListener("hashchange", () => { show(idxFromHash() ?? todayIdx()); view("word"); });
+
+/* ---------- Archive: one table per month ---------- */
+function buildArchive(){
+  const t = todayIdx();
+  if(t < 0){ $("arch").innerHTML = `<p class="muted">The first word appears ${fmt(0,{month:"long",day:"numeric"})}.</p>`; return; }
+  $("count").textContent = `${t+1} word${t ? "s" : ""} since ${fmt(0,{month:"long", day:"numeric", year:"numeric"})}, newest first.`;
+  let html = "", month = "", week = "";
+  for(let i = t; i >= 0; i--){
+    const d = new Date(START + i*DAY), m = fmt(i, {month:"long", year:"numeric"});
+    const wk = iso(Math.max(0, i - d.getUTCDay()));
+    if(m !== month){
+      html += (month ? "</tbody></table>" : "") + `<h3>${m}</h3><table><thead><tr><th>day</th><th>word and meaning</th></tr></thead><tbody>`;
+      month = m; week = wk;
+    }
+    const newWeek = wk !== week; week = wk;
+    const [w, pos, def] = wordFor(i);
+    html += `<tr data-i="${i}"${newWeek ? ' class="wk"' : ""}><td class="muted">${fmt(i,{weekday:"short", day:"numeric"})}</td>`
+         + `<td><a href="#${iso(i)}">${w}</a> <i class="muted">${pos.slice(0,3)}.</i> <span class="def-s">${esc(def)}</span></td></tr>`;
+  }
+  $("arch").innerHTML = html + "</tbody></table>";
+}
+
+/* ---------- Storage: Google Sheet if SCORES_URL is set, else this device only ---------- */
+const DEFAULT_PLAYERS = ["Heena", "Hashim", "Soha", "Zayd"];
+const DEFAULT_FAMILY = "Doshani Hashim";
+const same = (a, b) => String(a).trim().toLowerCase() === String(b).trim().toLowerCase();
+const mem = {};
+const LS = {
+  get(k){ try{ return localStorage.getItem(k) ?? mem[k] ?? null; }catch{ return mem[k] ?? null; } },
+  set(k,v){ mem[k] = v; try{ localStorage.setItem(k,v); }catch{} }
+};
+const localGet = (k, d) => JSON.parse(LS.get(k) || "null") ?? d;
+
+async function loadData(){
+  const since = monthKey(-1);
+  if(SCORES_URL){
+    try{ const r = await fetch(SCORES_URL + "?since=" + since); return await r.json(); }
+    catch{ return null; }
+  }
+  return {scores: localGet("sat-scores", []).filter(s => s.month >= since), players: localGet("sat-players", DEFAULT_PLAYERS), family: LS.get("sat-family-shared") || DEFAULT_FAMILY};
+}
+async function send(body){
+  if(SCORES_URL){
+    try{ const r = await fetch(SCORES_URL, {method:"POST", body:JSON.stringify(body)}); return await r.json(); }
+    catch{ return {ok:false, reason:"network"}; }
+  }
+  let players = localGet("sat-players", DEFAULT_PLAYERS);
+  const scoresAll = localGet("sat-scores", []);
+  if(body.action === "score"){
+    if(scoresAll.some(x => x.day === body.day && same(x.name, body.name))) return {ok:false, reason:"already"};
+    scoresAll.push({name:body.name, day:body.day, month:body.month, correct:body.correct, total:body.total});
+    LS.set("sat-scores", JSON.stringify(scoresAll));
+  }
+  if(body.action === "addPlayer"){ if(players.some(p => same(p, body.name))) return {ok:false, reason:"exists"}; players.push(body.name); }
+  if(body.action === "removePlayer") players = players.filter(p => !same(p, body.name));
+  if(body.action === "clearPlayers") players = [];
+  if(body.action === "setFamily") LS.set("sat-family-shared", body.family);
+  LS.set("sat-players", JSON.stringify(players));
+  return {ok:true};
+}
+
+/* ---------- Shared state ---------- */
+let scores = [], players = [], player = LS.get("sat-player") || "", round = null;
+
+async function refresh(){
+  document.querySelectorAll(".board").forEach(el => el.innerHTML = `<p class="muted">Loading…</p>`);
+  const d = await loadData();
+  if(d){ scores = d.scores; players = d.players; setFamily(d.family || DEFAULT_FAMILY); } else { scores = null; }
+  renderBoard(); renderPlayers(); renderFamily();
+  if(!round) renderGame();
+}
+
+/* ---------- Game ---------- */
+function quizPool(){
+  const t = todayIdx(); if(t < 0) return [];
+  const d = new Date();
+  const from = Math.max(0, Math.round((Date.UTC(d.getFullYear(), d.getMonth()-1, 1) - START)/DAY));
+  const seen = new Set(), out = [];
+  for(let i = from; i <= t; i++){ const w = wordFor(i); if(!seen.has(w[0])){ seen.add(w[0]); out.push(w); } }
+  return out;
+}
+const shuffle = a => { for(let i = a.length-1; i > 0; i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]] = [a[j],a[i]]; } return a; };
+function newRound(){
+  const qs = shuffle(quizPool()).slice(0, ROUND).map(w => {
+    const others = shuffle(WORDS.filter(x => x[0] !== w[0])).slice(0,3).map(x => x[2]);
+    return {w, opts: shuffle([w[2], ...others])};
+  });
+  return {qs, k:0, marks:[]};
+}
+
+function renderGame(){
+  const g = $("game");
+  if(scores === null){ g.innerHTML = `<p class="muted">Couldn't reach the scoreboard. Check the connection and reopen this tab.</p>`; return; }
+  if(quizPool().length === 0){ g.innerHTML = `<p class="muted">The game opens once the first word is out.</p>`; return; }
+  if(!player || !players.some(p => same(p, player))){
+    g.innerHTML = players.length
+      ? `<p style="margin-top:0">Who's playing?</p><div class="names">${players.map(n => `<button class="link" data-n="${esc(n)}">${esc(n)}</button>`).join("")}</div>`
+      : `<p class="muted">No players yet. Add the family on the <button class="link" id="toScores">scores</button> tab.</p>`;
+    g.querySelectorAll("[data-n]").forEach(b => b.onclick = () => { player = b.dataset.n; LS.set("sat-player", player); renderGame(); });
+    if($("toScores")) $("toScores").onclick = () => view("scores");
+    return;
+  }
+  const head = `<p class="muted" style="margin-top:0">Playing as <span style="color:var(--ink)">${esc(player)}</span> · <button class="link" id="sw">not you?</button></p>`;
+  const mine = scores.find(s => s.day === todayKey() && same(s.name, player));
+  if(mine){
+    g.innerHTML = head + `<p class="def" style="margin-top:0">${mine.correct} of ${mine.total} today.</p>
+      <p class="muted">One round per day. The next one opens tomorrow.</p>`;
+  } else {
+    const n = Math.min(ROUND, quizPool().length);
+    g.innerHTML = head + `<p>${n} words from this month and last. Pick the meaning of each.</p>
+      <button class="primary" id="start">Start today's round</button>`;
+    $("start").onclick = () => { round = newRound(); renderQ(); };
+  }
+  $("sw").onclick = () => { player = ""; LS.set("sat-player", ""); renderGame(); };
+}
+
+function tallyHTML(){
+  return `<span class="tally" aria-hidden="true">${round.qs.map((_, j) =>
+    j < round.marks.length ? (round.marks[j] ? '<span class="r">●</span>' : '<span class="w">●</span>') : "○").join("")}</span>`;
+}
+function renderQ(){
+  const q = round.qs[round.k], [w, pos] = q.w;
+  $("game").innerHTML = `<div class="q-meta"><span>${esc(player)} · ${round.k+1} of ${round.qs.length}</span>${tallyHTML()}</div>
+    <p class="word" style="font-size:2.4rem">${w}</p><p class="muted" style="margin:.2rem 0 0"><i>${pos}</i></p>
+    <ul class="opts">${q.opts.map((o, j) => `<li><button data-j="${j}"><span class="k">${"abcd"[j]}</span><span>${esc(cap(o))}</span></button></li>`).join("")}</ul>
+    <p class="feedback" id="fb"></p><div id="nx"></div>`;
+  document.querySelectorAll(".opts button").forEach(b => b.onclick = () => answer(+b.dataset.j));
+}
+function answer(j){
+  const q = round.qs[round.k];
+  round.marks.push(q.opts[j] === q.w[2]);
+  document.querySelectorAll(".opts button").forEach((b, x) => {
+    b.disabled = true;
+    if(q.opts[x] === q.w[2]) b.classList.add("right");
+    else if(x === j) b.classList.add("wrong");
+  });
+  document.querySelector(".tally").outerHTML = tallyHTML();
+  $("fb").innerHTML = markWord(q.w[3], q.w[0]);
+  const last = round.k === round.qs.length - 1;
+  $("nx").innerHTML = `<button class="primary">${last ? "See score" : "Next word"}</button>`;
+  $("nx").firstChild.onclick = () => { if(last) finish(); else { round.k++; renderQ(); } };
+}
+async function finish(){
+  const correct = round.marks.filter(Boolean).length, total = round.qs.length;
+  $("game").innerHTML = `<p class="def">${correct} of ${total}.</p><p class="muted">Saving…</p>`;
+  const res = await send({action:"score", name:player, day:todayKey(), month:monthKey(0), correct, total});
+  round = null;
+  if(!res.ok && res.reason === "network"){
+    $("game").innerHTML = `<p class="def">${correct} of ${total}.</p><p class="muted">Couldn't reach the scoreboard, so this round wasn't recorded.</p>`;
+    return;
+  }
+  await refresh();
+}
+
+/* ---------- Scoreboard: every player on the list, monthly totals, one bar per day ---------- */
+function agg(rows){
+  const m = new Map(players.map(n => [n.trim().toLowerCase(), {name:n, correct:0, total:0, days:{}}]));
+  rows.forEach(s => {
+    const a = m.get(s.name.trim().toLowerCase()); if(!a) return;
+    a.correct += +s.correct; a.total += +s.total; a.days[s.day] = +s.correct;
+  });
+  const rate = r => r.total ? r.correct / r.total : 0;
+  return [...m.values()].sort((a,b) => b.correct - a.correct || rate(b) - rate(a) || a.name.localeCompare(b.name));
+}
+function spark(days, keys){
+  const W = 4, G = 2, H = 16, today = todayKey();
+  return `<svg class="spark" width="${keys.length*(W+G)}" height="${H}" viewBox="0 0 ${keys.length*(W+G)} ${H}" aria-hidden="true">` +
+    keys.map((k, x) => {
+      const v = days[k];
+      if(v == null) return `<rect class="miss" x="${x*(W+G)}" y="${H-1}" width="${W}" height="1"/>`;
+      const h = Math.max(1, Math.round(v / ROUND * (H-1)));
+      return `<rect class="${k === today ? "today" : "bar"}" x="${x*(W+G)}" y="${H-h}" width="${W}" height="${h}"/>`;
+    }).join("") + `</svg>`;
+}
+function renderBoard(){
+  const ms = monthStart(0), name = ms.toLocaleDateString("en-US", {month:"long"});
+  const set = (cls, html) => document.querySelectorAll(cls).forEach(el => el.innerHTML = html);
+  set(".boardH", name);
+  if(scores === null){
+    set(".board", `<p class="muted">Couldn't load the scoreboard. Check the connection and reopen this tab.</p>`); set(".boardNote", ""); return;
+  }
+  const n = new Date(ms.getFullYear(), ms.getMonth()+1, 0).getDate();
+  const keys = [...Array(n)].map((_, i) => localKey(new Date(ms.getFullYear(), ms.getMonth(), i+1, 12)));
+  const rows = agg(scores.filter(s => s.month === monthKey(0)));
+  set(".board", rows.length ? `<table><thead><tr><th></th><th>player</th><th>daily</th><th class="n">correct</th><th class="n rate">rate</th></tr></thead><tbody>` +
+    rows.map((r, i) => `<tr><td class="muted">${r.correct ? i+1 : ""}</td><td>${esc(r.name)}</td><td>${spark(r.days, keys)}</td>` +
+      `<td class="n">${r.correct}</td><td class="n muted rate">${r.total ? Math.round(100*r.correct/r.total) + "%" : "–"}</td></tr>`).join("") +
+    `</tbody></table>` : `<p class="muted">No players yet. Add them on the scores tab.</p>`);
+  const prev = agg(scores.filter(s => s.month === monthKey(-1))).filter(r => r.correct > 0);
+  const champs = prev.filter(r => r.correct === prev[0].correct);
+  const lastName = monthStart(-1).toLocaleDateString("en-US", {month:"long"});
+  set(".boardNote", `The board clears on the 1st of each month. Each bar is one day of ${name}, correct answers out of ${ROUND}; today's bar is red, a flat tick means no round.` +
+    (prev.length ? `<br><br>${lastName} champion: ${champs.map(c => esc(c.name)).join(" and ")}, ${prev[0].correct} correct.` : ""));
+}
+
+/* ---------- Family name ---------- */
+let family = LS.get("sat-family") || DEFAULT_FAMILY;
+const cleanFamily = v => v.trim().replace(/^the\s+/i, "").replace(/\s+family$/i, "").replace(/\s+/g, " ").slice(0, 40);
+function setFamily(f){
+  family = f; LS.set("sat-family", f);
+  $("famLine").textContent = `The ${f} family`;
+  document.title = `${f} Family SAT Word of the Day`;
+}
+function renderFamily(){
+  const el = $("family");
+  if(scores === null){ el.innerHTML = ""; return; }
+  el.innerHTML = `<p style="margin-top:0;display:flex;gap:.8rem;align-items:baseline;flex-wrap:wrap">
+      <input type="text" id="famIn" value="${esc(family)}" maxlength="40" autocomplete="off" aria-label="Family name">
+      <button class="primary" id="famGo" style="margin-top:0">Save</button></p>
+    <p class="muted" id="famMsg" style="min-height:1.5em"></p>`;
+  $("famGo").onclick = async () => {
+    const v = cleanFamily($("famIn").value);
+    if(!v){ $("famMsg").textContent = "Enter a name."; return; }
+    const res = await send({action:"setFamily", family:v});
+    if(res && !res.ok){ $("famMsg").textContent = "Couldn't save. Check the connection."; return; }
+    setFamily(v); $("famMsg").textContent = "Saved.";
+  };
+  $("famIn").onkeydown = e => { if(e.key === "Enter") $("famGo").click(); };
+}
+
+/* ---------- Player list: add, remove, remove everyone ---------- */
+function twoTap(btn, label, action){
+  btn.onclick = async () => {
+    if(btn.dataset.armed){ btn.disabled = true; await action(); return; }
+    const orig = btn.textContent; btn.dataset.armed = 1; btn.textContent = label; btn.style.color = "var(--accent)";
+    setTimeout(() => { if(btn.isConnected){ delete btn.dataset.armed; btn.textContent = orig; btn.style.color = ""; } }, 3000);
+  };
+}
+function renderPlayers(){
+  const el = $("players");
+  if(scores === null){ el.innerHTML = ""; return; }
+  el.innerHTML = (players.length
+      ? `<table><tbody>${players.map(p => `<tr><td>${esc(p)}</td><td class="n"><button class="link" data-rm="${esc(p)}">remove</button></td></tr>`).join("")}</tbody></table>`
+      : `<p class="muted" style="margin-top:0">The list is empty. Add the first player.</p>`) +
+    `<p style="margin-top:1.1rem;display:flex;gap:.8rem;align-items:baseline;flex-wrap:wrap">
+       <input type="text" id="addNm" placeholder="name" maxlength="30" autocomplete="off" aria-label="New player's name">
+       <button class="primary" id="addGo" style="margin-top:0">Add player</button></p>
+     <p class="muted" id="pMsg" style="min-height:1.5em"></p>` +
+    (players.length ? `<p><button class="link" id="clearAll">Remove everyone and start a new list</button></p>` : "");
+  const after = async res => {
+    if(res && !res.ok) $("pMsg").textContent = res.reason === "exists" ? "That name is already on the list." : "Couldn't save. Check the connection.";
+    else await refresh();
+  };
+  $("addGo").onclick = async () => { const v = $("addNm").value.trim().slice(0,30); if(v) after(await send({action:"addPlayer", name:v})); };
+  $("addNm").onkeydown = e => { if(e.key === "Enter") $("addGo").click(); };
+  el.querySelectorAll("[data-rm]").forEach(b => twoTap(b, "tap again to remove", async () => after(await send({action:"removePlayer", name:b.dataset.rm}))));
+  if($("clearAll")) twoTap($("clearAll"), "tap again to remove all " + players.length, async () => after(await send({action:"clearPlayers"})));
+}
+
+/* ---------- Start ---------- */
+setFamily(family);
+buildArchive();
+show(idxFromHash() ?? Math.max(0, todayIdx()));
+loadData().then(d => { if(d && d.family) setFamily(d.family); });
+if("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
